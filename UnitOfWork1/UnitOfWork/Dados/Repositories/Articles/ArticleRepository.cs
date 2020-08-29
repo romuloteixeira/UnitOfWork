@@ -26,7 +26,8 @@ namespace UnitOfWork1.Dados.Repositories.Articles
         {
             return articleContext
                     .Article
-                    .Where(a => a.ArticleId.Equals(articleId));
+                    .Where(a => a.ArticleId.Equals(articleId))
+                    .FirstOrDefault();
         }
 
         public void Add(Article article)
